@@ -1,3 +1,5 @@
+# View Tutorial at https://www.youtube.com/watch?v=Ov9Xbl7qrCE&list=PLYxCPjxv3wOm-DqPtw9oKsBqQvj0prT5O&index=1
+
 import random
 import time
 
@@ -12,7 +14,8 @@ max_score = int(input('Enter Max Score: '))
 option = ["Rock", "Paper", "Scissors"]
 
 while playerscore != max_score and computerscore != max_score:
-    print(playername,"Score:", playerscore, "\tComputer Score:",computerscore)
+    print(playername, "Score:", playerscore,
+          "\tComputer Score:", computerscore)
     playerinput = input("Rock, Paper or Scissors? ")
     computerinput = random.choice(option)
     print("ROCK!")
@@ -21,7 +24,7 @@ while playerscore != max_score and computerscore != max_score:
     time.sleep(0.5)
     print("SCISSORS!")
     time.sleep(0.5)
-    print("Computer Choice =>",computerinput)
+    print("Computer Choice =>", computerinput)
     if playerinput.lower() == computerinput.lower():
         print("TIE!")
     elif playerinput.lower() == "rock":
@@ -32,7 +35,7 @@ while playerscore != max_score and computerscore != max_score:
             playerscore += 1
             print("You Won!", playerinput, "Smashes", computerinput)
     elif playerinput.lower() == "paper":
-        if computerinput.lower() == "scissor":
+        if computerinput.lower() == "scissors":
             computerscore += 1
             print("You Lost!", computerinput, "Cut", playerinput)
         else:
